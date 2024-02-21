@@ -43,6 +43,7 @@
 			= <&porta 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			, <&porta 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			, <&porta  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			;
 	};
 
 	default_transform: default_transform {
