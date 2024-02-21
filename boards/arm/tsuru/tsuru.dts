@@ -27,22 +27,22 @@
 		diode-direction = "col2row";
 		
 		col-gpios
-			= <&porta 08 GPIO_ACTIVE_HIGH>
-			, <&porta 09 GPIO_ACTIVE_HIGH>
+			= <&porta  8 GPIO_ACTIVE_HIGH>
+			, <&porta  9 GPIO_ACTIVE_HIGH>
 			, <&porta 10 GPIO_ACTIVE_HIGH>
 			, <&porta 23 GPIO_ACTIVE_HIGH>
-			, <&porta 00 GPIO_ACTIVE_HIGH>
-			, <&porta 02 GPIO_ACTIVE_HIGH>
-			, <&porta 03 GPIO_ACTIVE_HIGH>
-			, <&porta 04 GPIO_ACTIVE_HIGH>
-			, <&porta 05 GPIO_ACTIVE_HIGH>
-			, <&porta 06 GPIO_ACTIVE_HIGH>
+			, <&porta  0 GPIO_ACTIVE_HIGH>
+			, <&porta  2 GPIO_ACTIVE_HIGH>
+			, <&porta  3 GPIO_ACTIVE_HIGH>
+			, <&porta  4 GPIO_ACTIVE_HIGH>
+			, <&porta  5 GPIO_ACTIVE_HIGH>
+			, <&porta  6 GPIO_ACTIVE_HIGH>
 			;
 
 		row-gpios
 			= <&porta 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			, <&porta 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&porta 07 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&porta  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	};
 
 	default_transform: default_transform {
