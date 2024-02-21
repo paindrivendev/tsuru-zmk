@@ -16,3 +16,6 @@ CONFIG_BUILD_OUTPUT_UF2=y
 # encoder support
 CONFIG_EC11=y
 CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
+
+# composite matrix support (use mixed matrix and direct pin)
+CONFIG_ZMK_KSCAN_COMPOSITE_DRIVER=y
