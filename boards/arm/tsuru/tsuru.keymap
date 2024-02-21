@@ -17,7 +17,7 @@
                  &kp R    &kp S    &kp T    &kp H    &kp K      &kp X    &kp N    &kp A    &kp I    &kp O
                 &kp Z    &kp C    &kp G    &kp D    &kp Z        &kp Q    &kp M    &comsem  &dotcol  &kp SLASH
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
