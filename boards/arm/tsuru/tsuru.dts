@@ -25,8 +25,8 @@
 
 	kscan_comp: kscan_0 {
 		compatible = "zmk,kscan-composite";
-        rows = <4>;
-        columns = <10>;
+        rows = <3>;
+        columns = <11>;
 
         matrix {
             kscan = <&kscan_matrix>;
