@@ -84,7 +84,7 @@
 		a-gpios = <&porta 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&porta 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		steps = <80>;
-		status = "okay";
+		status = "disabled";
 	};
 
 	sensors {
@@ -99,10 +99,10 @@
 };
 
 zephyr_udc0: &usb0 {
-    status = "okay";
+	status = "okay";
 
-    pinctrl-0 = <&usb_dc_default>;
-    pinctrl-names = "default";
+	pinctrl-0 = <&usb_dc_default>;
+	pinctrl-names = "default";
 
 	cdc_acm_uart: cdc_acm_uart {
 		compatible = "zephyr,cdc-acm-uart";
