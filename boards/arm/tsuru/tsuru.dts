@@ -97,10 +97,10 @@
 };
 
 zephyr_udc0: &usb0 {
-        status = "okay";
+    status = "okay";
 
-        pinctrl-0 = <&usb_dc_default>;
-        pinctrl-names = "default";
+    pinctrl-0 = <&usb_dc_default>;
+    pinctrl-names = "default";
 
 	cdc_acm_uart: cdc_acm_uart {
 		compatible = "zephyr,cdc-acm-uart";
