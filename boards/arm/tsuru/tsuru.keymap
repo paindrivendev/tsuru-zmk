@@ -15,9 +15,10 @@
             bindings = <
                   &kp V    &kp W    &kp F    &kp P    &kp B           &kp J    &kp L    &kp U     &kp Y    &kp SQT
                  &kp R    &kp S    &kp T    &kp H    &kp K             &kp X    &kp N    &kp A     &kp I    &kp O
-                &kp Z    &kp C    &kp G    &kp D    &kp SPACE &kp TAB   &kp E    &kp M    &kp COMMA &kp DOT  &kp SLASH
+                &kp Z    &kp C    &kp G    &kp D    &kp SPACE   &kp E    &kp M    &kp COMMA &kp DOT  &kp SLASH
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
+                //&kp Z    &kp C    &kp G    &kp D    &kp SPACE &kp TAB   &kp E    &kp M    &kp COMMA &kp DOT  &kp SLASH
