@@ -7,15 +7,98 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+
+    combos {
+        compatible = "zmk,combos";
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp ESC>;
+        };
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp BSPC>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp TAB>;
+        };
+
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp SPACE>;
+        };
+        
+         combo_alt {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            bindings = <&kp LGUI>;
+        };
+
+         combo_alt {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            bindings = <&kp LALT>;
+        };
+        
+    };
+
+
+#define BASE 0
+#define NUMBER 1
+#define SYMBOL 2
+#define ARROW 3
+#define TMUX 4
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                  &kp V    &kp W    &kp F    &kp P    &kp B           &kp J    &kp L    &kp U     &kp Y    &kp SQT
-                 &kp R    &kp S    &kp T    &kp H    &kp K             &kp X    &kp N    &kp A     &kp I    &kp O
-                &kp Z    &kp C    &kp G    &kp D    &kp SPACE &kp TAB   &kp E    &kp M    &kp COMMA &kp DOT  &kp SLASH
+
+           &kp Q    &kp W    &lt SYMBOL E    &kp R    &kp T                                           &kp Y    &kp U    &lt SYMBOL I    &kp O    &kp P 
+           &kp A   &lt TMUX S &lt NUMBER D  &lt ARROW F  &kp G                                    &kp H    &kp J    &kp K    &kp L    &kp SEMICOLON;
+           &mt LSFT Z    &kp X    &kp C    &kp V    &kp B          &mt LGUI ENTER                    &kp N    &kp M    &kp CMMA    &kp DOT    &mt LSFT SLASH
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        number_layer {
+            bindings = <
+              &trans    &trans    &trans    &trans    &trans                         &trans    &kp N7 &kp N8 &kp N9    &trans     
+              &trans    &trans    &trans    &trans    &trans                         &trans    &kp N4 &kp N5 &kp N6    &trans 
+              &trans    &trans    &trans    &trans    &trans       &trans            &kp N0    &kp N1 &kp N2 &kp N3    &kp N0
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        symbol_layer {
+            bindings = <
+              &kp EXCL &kp AT    &kp HASH &kp DOLLAR &kp PERCENT                               &kp CARET &kp AMPERSAND &kp ASTERISK  &kp PIPE &kp BACKSLASH
+              &kp TILDE    &kp GRAVE    &kp KP_PLUS    &kp UNDER    &trans                     &kp LPAR    &kp LBKT    &kp LBRC    &kp SQT    &kp DQT  
+              &kp EQUAL    &kp KP_PLUS    &kp KP_MINUS    &trans    &trans    &trans           &kp RPAR    &kp RBKT    &kp RBRC    &kp UNDER    &kp KP_MINUS  
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        arrow_layer {
+            bindings = <
+              &trans    &trans    &trans    &trans    &trans                         &bt BT_CLR    &trans    &trans    &trans    &trans     
+              &trans    &trans    &trans    &trans    &trans                         &trans    &kp LEFT  &kp DOWN    &kp UP  &kp RIGHT  
+              &trans    &trans    &trans    &trans    &trans       &trans            &kp N0    &kp N1 &kp N2 &kp N3    &kp N0
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        tmux_layer {
+            bindings = <
+              &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &kp LA(I)    &trans    &trans     
+              &trans    &trans    &trans    &trans    &trans                         &trans    &kp LC(H) &kp LC(J)    &kp LC(K)    &kp LC(L)
+              &trans    &trans    &trans    &trans    &trans    &trans               &trans    &trans    &kp LA(COMMA)    &trans    &trans 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
